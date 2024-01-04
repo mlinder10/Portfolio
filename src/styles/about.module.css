@@ -1,0 +1,20 @@
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.top > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.title {
+  font-size: 1.5em;
+}
+
+.image {
+  width: 25vw;
+}

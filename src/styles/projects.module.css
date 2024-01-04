@@ -1,0 +1,45 @@
+.main {
+  background-color: var(--background-secondary);
+  padding-inline: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.project {
+  background-color: var(--background);
+  border-radius: 25px;
+  padding: 2em;
+}
+
+.content {
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.img {
+  width: 80%;
+  border-radius: 8px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5em;
+}
+
+.technologies li {
+  color: var(--accent);
+  border: var(--accent);
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+  border: thin solid var(--accent);
+}

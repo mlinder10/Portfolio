@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--background-trans);
+  z-index: 1;
+  transition: 0.3s ease-out;
+}
+
+.closed .left {
+  font-size: 1.5em;
+}
+
+.closed .right {
+  font-size: 0.8em;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 4em;
+  align-items: flex-end;
+}
+
+.left {
+  font-size: 3em;
+  transition: 0.3s ease-out;
+}
+
+.right {
+  display: flex;
+  gap: 2em;
+  font-size: 1.2em;
+  transition: 0.3s ease-out;
+}
+
+.active {
+  color: var(--accent);
+  font-weight: 600;
+}

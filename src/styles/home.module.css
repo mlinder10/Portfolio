@@ -1,0 +1,79 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4em;
+  position: relative;
+}
+
+.title {
+  font-size: 5em;
+}
+
+.subtitle {
+  font-size: 3em;
+  color: var(--secondary);
+}
+
+.links {
+  margin-top: 3em;
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+.contact {
+  padding: 0.75em 1.5em;
+  border-radius: 0.5em;
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+.projects {
+  border: thin solid var(--accent);
+  color: var(--accent);
+  padding: 0.75em 1.5em;
+  border-radius: 0.5em;
+}
+
+.icon {
+  position: absolute;
+  font-size: 5em;
+  fill: #0008;
+  animation: float 3s infinite ease-in-out;
+}
+
+.img {
+  width: 40vw;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.code {
+  top: 82%;
+  left: 10%;
+}
+
+.react {
+  top: 18%;
+  left: 25%;
+}
+
+.apple {
+  top: 70%;
+  left: 40%;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0px) rotate(0);
+  }
+  50% {
+    transform: translate(0, 15px) rotate(15deg);
+  }
+  100% {
+    transform: translate(0, 0px) rotate(0);
+  }
+}
