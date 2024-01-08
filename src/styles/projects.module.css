@@ -13,9 +13,14 @@
 }
 
 .content {
-  padding-top: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .img {
@@ -27,6 +32,7 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+  padding-right: 3em;
 }
 
 .technologies {
@@ -42,4 +48,14 @@
   padding: 0.25em 0.5em;
   border-radius: 5px;
   border: thin solid var(--accent);
+}
+
+.links {
+  display: flex;
+  gap: 2em;
+}
+
+.link {
+  font-size: .9em;
+  color: var(--accent);
 }

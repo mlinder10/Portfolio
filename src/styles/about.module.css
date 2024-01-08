@@ -1,13 +1,31 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 .top {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-inline: 4em;
+}
+
+.top p {
+  padding-inline: 4em;
+  text-indent: 4ch;
+}
+
+.columns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.top > div {
+.columns > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   margin-top: 2em;
 }
 
