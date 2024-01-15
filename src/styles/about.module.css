@@ -1,18 +1,22 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 4em;
 }
 
 .top {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 4em;
   padding-inline: 4em;
 }
 
+.title {
+  font-size: 3rem;
+}
+
 .top p {
-  padding-inline: 4em;
+  padding-inline: 12em;
   text-indent: 4ch;
 }
 
@@ -29,10 +33,11 @@
   margin-top: 2em;
 }
 
-.title {
+.heading {
   font-size: 1.5em;
 }
 
 .image {
-  width: 25vw;
+  width: 20vw;
+  aspect-ratio: 2 / 3;
 }

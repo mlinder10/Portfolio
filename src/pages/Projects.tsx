@@ -3,12 +3,16 @@ import styles from "../styles/projects.module.css";
 export default function Projects() {
   return (
     <section className={styles.main} id="projects">
-      <h1>Projects</h1>
+      <h1 className={styles.title}>Projects</h1>
       <article className={styles.project}>
         <div className={styles.content}>
           <div className={styles.left}>
             <h2>Word Catching Journal</h2>
-            <img src="" alt="" className={styles.img} />
+            <img
+              src="/projects/wordCatchingJournal.png"
+              alt=""
+              className={styles.img}
+            />
           </div>
           <div className={styles.right}>
             <h3>Technologies Used</h3>
@@ -20,9 +24,11 @@ export default function Projects() {
             </ul>
             <h4>Dictionary Social Media App</h4>
             <p>
-              Using Next.js and SwiftUI, I created a small social media app to
-              learn, log, and share unfamiliar words in the hope to help users
-              expand their vocabulary.
+              {`
+                Using Next.js and SwiftUI, I created a small social media app to
+                learn, log, and share unfamiliar words in an attempt to broaden
+                users' vocabulary.
+              `}
             </p>
             <div className={styles.links}>
               <a
@@ -54,7 +60,7 @@ export default function Projects() {
         </div>
       </article>
 
-      <article className={styles.project}>
+      <article className={`${styles.project} ${styles["project-two"]}`}>
         <div className={styles.content}>
           <div className={styles.right}>
             <h3>Technologies Used</h3>
@@ -69,8 +75,10 @@ export default function Projects() {
               Semester-long group project for CSCE 247 (Software Engineering)
             </h4>
             <p>
-              Given two fourteen-day sprints, I, along with my four group mates
-              created a task manager application similar to Github Projects.
+              {`
+                Given two fourteen-day sprints, I, along with my four group mates
+                created a task manager application similar to Github Projects.
+              `}
             </p>
             <a
               className={styles.link}
@@ -111,8 +119,10 @@ export default function Projects() {
             </ul>
             <h4>Company page for Valet Ventures</h4>
             <p>
-              I was contracted by Valet Ventures--a small business based in
-              Columbia, SC--to create a landing page for their company.
+              {`
+                I was contracted by Valet Ventures--a small business based in
+                Columbia, SC--to create a landing page for their company.
+              `}
             </p>
             <a
               className={styles.link}

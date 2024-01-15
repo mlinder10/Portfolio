@@ -18,6 +18,9 @@ export default function Contact() {
           <textarea rows={10} placeholder="Message" />
         </form>
       </div>
+      <div className={styles.right}>
+        <img src="" alt="" />
+      </div>
     </section>
   );
 }

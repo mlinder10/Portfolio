@@ -59,6 +59,11 @@ export default function Navbar() {
                 Contact
               </a>
             </li>
+            <li className={styles.resume}>
+              <a href="/Resume.pdf" target="_blank">
+                Resume
+              </a>
+            </li>
           </div>
         </ul>
       </nav>
