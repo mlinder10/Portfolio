@@ -29,7 +29,7 @@ export default function Projects() {
                 {`
                 Using Next.js and SwiftUI, I created a small social media app to
                 learn, log, and share unfamiliar words in an attempt to broaden
-                users' vocabulary.
+                the vocabulary of users.
               `}
               </p>
               <div className={styles.links}>
