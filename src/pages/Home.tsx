@@ -1,3 +1,4 @@
+import Reveal from "../components/Reveal";
 import styles from "../styles/home.module.css";
 
 export default function Home() {
@@ -8,18 +9,20 @@ export default function Home() {
         alt=""
         className={styles.img}
       />
-      <div className={styles["content-container"]}>
-        <p className={styles.title}>{"Hi, I'm Matt"}</p>
-        <p className={styles.subtitle}>Software Engineer</p>
-        <div className={styles.links}>
-          <a href="#contact" className={styles.contact}>
-            Contact Me
-          </a>
-          <a href="#projects" className={styles.projects}>
-            View Projects
-          </a>
+      <Reveal>
+        <div className={styles["content-container"]}>
+          <p className={styles.title}>{"Hi, I'm Matt"}</p>
+          <p className={styles.subtitle}>Software Engineer</p>
+          <div className={styles.links}>
+            <a href="#contact" className={styles.contact}>
+              Contact Me
+            </a>
+            <a href="#projects" className={styles.projects}>
+              View Projects
+            </a>
+          </div>
         </div>
-      </div>
+      </Reveal>
       <div className={styles.right}></div>
     </section>
   );

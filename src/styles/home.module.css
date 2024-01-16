@@ -45,14 +45,14 @@
   z-index: -1;
   object-position: bottom;
 
-  animation: dissipate linear forwards;
-  animation-timeline: view();
-  animation-range: exit;
+  /* animation: dissipate linear forwards; */
+  /* animation-timeline: view(); */
+  /* animation-range: exit; */
 }
 
-@keyframes dissipate {
+/* @keyframes dissipate {
   85%, 100% {
     opacity: 0;
     scale: 2;
   }
-}
+} */
