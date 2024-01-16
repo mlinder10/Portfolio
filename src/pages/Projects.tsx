@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section className={styles.main} id="projects">
       <h1 className={styles.title}>Projects</h1>
-      <Reveal>
+      <Reveal from="left" duration={0.8}>
         <article className={styles.project}>
           <div className={styles.content}>
             <div className={styles.left}>
@@ -63,7 +63,7 @@ export default function Projects() {
         </article>
       </Reveal>
 
-      <Reveal>
+      <Reveal from="right" duration={0.8}>
         <article className={`${styles.project} ${styles["project-two"]}`}>
           <div className={styles.content}>
             <div className={styles.right}>
@@ -105,7 +105,7 @@ export default function Projects() {
         </article>
       </Reveal>
 
-      <Reveal>
+      <Reveal from="left" duration={0.8}>
         <article className={styles.project}>
           <div className={styles.content}>
             <div className={styles.left}>
