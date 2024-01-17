@@ -28,6 +28,8 @@
 
 .right button {
   background-color: transparent;
+  /* border-radius: 100%; */
+  /* width: 4em; */
   border: none;
   outline: none;
   cursor: pointer;

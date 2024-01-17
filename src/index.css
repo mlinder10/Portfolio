@@ -9,11 +9,13 @@
 }
 
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--background);
+  overflow: hidden;
 }
 
 a {

@@ -19,33 +19,37 @@ export default function About() {
   }
 
   function computeStyle(interest: Interests) {
+    const left = { translate: `-${offset}px`, opacity: "0", scale: "0.6" };
+    const target = { translate: "0", opacity: "1", scale: "1" };
+    const right = { translate: `${offset}px`, opacity: "0", scale: "0.6" };
+
     switch (interest) {
       case 0:
         switch (show) {
           case 0:
-            return { translate: "0", opacity: "1" };
+            return target;
           case 1:
-            return { translate: `-${offset}px`, opacity: "0" };
+            return left;
           case 2:
-            return { translate: `${offset}px`, opacity: "0" };
+            return right;
         }
       case 1:
         switch (show) {
           case 0:
-            return { translate: `${offset}px`, opacity: "0" };
+            return right;
           case 1:
-            return { translate: "0", opacity: "1" };
+            return target;
           case 2:
-            return { translate: `-${offset}px`, opacity: "0" };
+            return left;
         }
       case 2:
         switch (show) {
           case 0:
-            return { translate: `-${offset}px`, opacity: "0" };
+            return left;
           case 1:
-            return { translate: `${offset}px`, opacity: "0" };
+            return right;
           case 2:
-            return { translate: "0", opacity: "1" };
+            return target;
         }
     }
   }
@@ -67,34 +71,25 @@ export default function About() {
           <VscArrowLeft />
         </button>
         <div className={styles["interest-container"]}>
-          <div
-            className={styles.interest}
-            style={computeStyle(0)}
-          >
+          <div className={styles.interest} style={computeStyle(0)}>
             <h2>Reading</h2>
             <div className={styles.content}>
               <img className={styles.img} src="/book.jpeg" alt="" />
-              <p className={styles.text}>Some Text</p>
+              <p className={styles.text}>{`Some Text`}</p>
             </div>
           </div>
-          <div
-            className={styles.interest}
-            style={computeStyle(1)}
-          >
+          <div className={styles.interest} style={computeStyle(1)}>
             <h2>Listening</h2>
             <div className={styles.content}>
               <img className={styles.img} src="/podcast.png" alt="" />
-              <p className={styles.text}>Some Text</p>
+              <p className={styles.text}>{`Some Text`}</p>
             </div>
           </div>
-          <div
-            className={styles.interest}
-            style={computeStyle(2)}
-          >
+          <div className={styles.interest} style={computeStyle(2)}>
             <h2>Building</h2>
             <div className={styles.content}>
               <img className={styles.img} src="/keyboard.png" alt="" />
-              <p className={styles.text}>Some Text</p>
+              <p className={styles.text}>{`Some Text`}</p>
             </div>
           </div>
         </div>

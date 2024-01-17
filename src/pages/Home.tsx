@@ -33,7 +33,7 @@ export default function Home() {
   function calculateOpacity() {
     if (scroll < 0) return 1;
     if (scroll > pageHeight) return 0;
-    return 1 - (scroll / pageHeight)
+    return 1 - scroll / pageHeight;
   }
 
   return (
@@ -43,7 +43,10 @@ export default function Home() {
           src="/background.png"
           alt=""
           className={styles.img}
-          style={{ scale: `${calculateScale()}`, opacity: `${calculateOpacity()}` }}
+          style={{
+            scale: `${calculateScale()}`,
+            opacity: `${calculateOpacity()}`,
+          }}
         />
       </div>
       <Reveal duration={0.7}>
