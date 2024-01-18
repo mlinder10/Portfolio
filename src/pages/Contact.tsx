@@ -1,4 +1,4 @@
-import { FaEnvelope, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaUser } from "react-icons/fa";
 import styles from "../styles/contact.module.css";
 import { FormEvent, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
