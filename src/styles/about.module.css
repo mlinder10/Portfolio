@@ -8,12 +8,12 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   padding: 4em 2em;
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .text {
@@ -23,5 +23,6 @@
 .main img {
   width: 100%;
   height: 100%;
+  aspect-ratio: 7 / 11;
   object-fit: cover;
 }

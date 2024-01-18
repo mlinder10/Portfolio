@@ -4,7 +4,7 @@ import styles from "../styles/projects.module.css";
 export default function Projects() {
   return (
     <section className={styles.main} id="projects">
-      <h1 className={styles.title}>Projects</h1>
+      <h1 className={styles.title}>My Projects</h1>
       <Reveal from="left" duration={0.8}>
         <article className={styles.project}>
           <div className={styles.content}>
