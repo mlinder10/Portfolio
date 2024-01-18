@@ -81,9 +81,12 @@ export default function Projects() {
               </h4>
               <p>
                 {`
-                Given two fourteen-day sprints, I, along with my four group mates
-                created a task manager application similar to Github Projects.
-              `}
+                  Over the course of two fourteen-day sprints, my group mates and I
+                  developed a Scrum task manager desktop application. We employed
+                  the JavaFX framework along with the MVC architectural pattern to
+                  create a GUI and wrote the backend entirely in Java, using JSON
+                  files to store data.
+                `}
               </p>
               <a
                 className={styles.link}
@@ -127,8 +130,8 @@ export default function Projects() {
               <h4>Company page for Valet Ventures</h4>
               <p>
                 {`
-                I was contracted by Valet Ventures--a small business based in
-                Columbia, SC--to create a landing page for their company.
+                  I was contracted by Valet Ventures--a small business based in
+                  Columbia, SC--to create a landing page for their company.
                 `}
               </p>
               <a
