@@ -27,12 +27,21 @@ export default function Projects() {
               <h4>Dictionary Social Media App</h4>
               <p>
                 {`
-                Using Next.js and SwiftUI, I created a small social media app to
-                learn, log, and share unfamiliar words in an attempt to broaden
-                the vocabulary of users.
-              `}
+                  Using Next.js and SwiftUI, I created a small social media app with 
+                  web and iOS interfaces. The goal of the app is to help users 
+                  bolster their vocabulary by providing a centralized location to learn, 
+                  log, and share unfamiliar words.
+                `}
               </p>
               <div className={styles.links}>
+                <a
+                  className={styles.link}
+                  href="https://word-catching-journal.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Site
+                </a>
                 <a
                   className={styles.link}
                   href="https://github.com/mlinder10/WordCatchingJournal"
@@ -48,14 +57,6 @@ export default function Projects() {
                   rel="noreferrer"
                 >
                   Source Code (iOS)
-                </a>
-                <a
-                  className={styles.link}
-                  href="https://word-catching-journal.vercel.app"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Site
                 </a>
               </div>
             </div>
