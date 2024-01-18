@@ -19,9 +19,19 @@ export default function About() {
   }
 
   function computeStyle(interest: Interests) {
-    const left = { translate: `-${offset}px`, opacity: "0", scale: "0.6" };
+    const left = {
+      translate: `-${offset}px`,
+      opacity: "0",
+      scale: "0.6",
+      pointerEvents: "none",
+    };
     const target = { translate: "0", opacity: "1", scale: "1" };
-    const right = { translate: `${offset}px`, opacity: "0", scale: "0.6" };
+    const right = {
+      translate: `${offset}px`,
+      opacity: "0",
+      scale: "0.6",
+      pointerEvents: "none",
+    };
 
     switch (interest) {
       case 0:
@@ -59,11 +69,13 @@ export default function About() {
       <div className={styles.left}>
         <h1 className={styles.title}>About Me</h1>
         <p>
-          I'm currently a junior at the University of South Carolina, where I
-          study computer science and psychology. I love learning about new
-          technologies and ideas. As a consequence, I spend the majority of my
-          free time reading books, listening to podcasts, and building things.
-          Here are some of the places that my interest lies at the moment.
+          {`
+            I'm currently a junior at the University of South Carolina, where I
+            study computer science and psychology. I love learning about new
+            technologies and ideas. As a consequence, I spend the majority of my
+            free time reading books, listening to podcasts, and building things.
+            Here are some of the places that my interest lies at the moment.
+          `}
         </p>
       </div>
       <div className={styles.right}>
@@ -72,24 +84,24 @@ export default function About() {
         </button>
         <div className={styles["interest-container"]}>
           <div className={styles.interest} style={computeStyle(0)}>
-            <h2>Reading</h2>
-            <div className={styles.content}>
-              <img className={styles.img} src="/book.jpeg" alt="" />
-              <p className={styles.text}>{`Some Text`}</p>
+            <img className={styles.img} src="/book.jpeg" alt="" />
+            <div className={styles["txt-box"]}>
+              <h2>Reading</h2>
+              <p>Some Text</p>
             </div>
           </div>
           <div className={styles.interest} style={computeStyle(1)}>
-            <h2>Listening</h2>
-            <div className={styles.content}>
-              <img className={styles.img} src="/podcast.png" alt="" />
-              <p className={styles.text}>{`Some Text`}</p>
+            <img className={styles.img} src="/podcast.png" alt="" />
+            <div className={styles["txt-box"]}>
+              <h2>Listening</h2>
+              <p>Some Text</p>
             </div>
           </div>
           <div className={styles.interest} style={computeStyle(2)}>
-            <h2>Building</h2>
-            <div className={styles.content}>
-              <img className={styles.img} src="/keyboard.png" alt="" />
-              <p className={styles.text}>{`Some Text`}</p>
+            <img className={styles.img} src="/keyboard.png" alt="" />
+            <div className={styles["txt-box"]}>
+              <h2>Building</h2>
+              <p>Some Text</p>
             </div>
           </div>
         </div>
