@@ -24,31 +24,22 @@ export default function Home() {
     };
   }, []);
 
-  function calculateScale() {
-    if (scroll < 0) return 1;
-    if (scroll > pageHeight) return 3;
-    return 1 + (scroll / pageHeight) * 2;
-  }
-
   function calculateOpacity() {
     if (scroll < 0) return 1;
-    if (scroll > pageHeight) return 0;
-    return 1 - scroll / pageHeight;
+    if (scroll > (pageHeight / 1.5)) return 0;
+    return 1 - scroll / (pageHeight / 1.5);
   }
 
   return (
     <section className={styles.main} id="home">
-      <div className={styles["img-container"]}>
-        <img
-          src="/background.png"
-          alt=""
-          className={styles.img}
-          style={{
-            scale: `${calculateScale()}`,
-            opacity: `${calculateOpacity()}`,
-          }}
-        />
-      </div>
+      <img
+        src="/background.png"
+        alt=""
+        className={styles.img}
+        style={{
+          opacity: `${calculateOpacity()}`,
+        }}
+      />
       <Reveal duration={0.7}>
         <div className={styles["content-container"]}>
           <p className={styles.title}>{"Hi, I'm Matt"}</p>

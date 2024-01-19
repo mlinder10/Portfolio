@@ -10,11 +10,11 @@
 }
 
 .closed .left {
-  font-size: 1.5em;
+  font-size: var(--sub-heading-size);
 }
 
 .closed .right {
-  font-size: 0.8em;
+  font-size: var(--body-size-sm);
 }
 
 .ul {
@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 4em;
+  padding-inline: var(--inline-padding);
   align-items: flex-end;
   padding-block: 2em;
 }
@@ -32,7 +32,7 @@
 }
 
 .left {
-  font-size: 3em;
+  font-size: var(--title-size);
   transition: 0.3s ease-out;
 }
 
@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
   gap: 2em;
-  font-size: 1.2em;
+  font-size: var(--body-size);
   transition: 0.3s ease-out;
 }
 
@@ -54,4 +54,10 @@
   border: thin solid var(--accent);
   border-radius: 5px;
   padding: 0.25em 0.5em;
+}
+
+@media (width <= 425px) {
+  .left {
+    display: none;
+  }
 }

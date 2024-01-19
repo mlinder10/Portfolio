@@ -12,6 +12,7 @@ type RevealProps = {
   coverColor?: string;
   coverDuration?: number;
   coverDelay?: number;
+  style?: Record<string, string | number>;
 };
 
 export default function Reveal({
@@ -25,6 +26,7 @@ export default function Reveal({
   coverColor = "var(--accent)",
   coverDuration = 0.3,
   coverDelay = 0,
+  style = {},
 }: RevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -65,7 +67,7 @@ export default function Reveal({
   }
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
+    <div ref={ref} style={{ position: "relative", width, overflow: "hidden", ...style }}>
       <motion.div
         variants={{
           hidden: computeFrom(),

@@ -1,66 +1,111 @@
 .main {
   background-color: var(--background-secondary);
-  padding-inline: 4em;
+  padding-inline: var(--inline-padding);
   display: flex;
   flex-direction: column;
-  gap: 4em;
+  gap: var(--gap-lg);
 }
 
 .title {
-  font-size: 3rem;
+  font-size: var(--title-size);
+  margin-bottom: calc(-0.2 * var(--gap-lg));
 }
 
 .project {
-  background-color: var(--background);
-  border-radius: 25px;
-  padding: 2em;
-  margin-inline: 4em;
-}
-
-.content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 2fr;
 }
 
-.left {
+.project-backwards {
+  grid-template-columns: 2fr 3fr;
+}
+
+.imgs {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.project-backwards .imgs {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+}
+
+.project-backwards .img-left,
+.project-backwards .img-right {
+  width: 100%
+}
+
+.img-left {
+  width: 15vw;
+  border-radius: 12px;
+}
+
+.img-right {
+  width: 30vw;
+  border-radius: 12px;
+}
+
+.text-container {
   display: flex;
   flex-direction: column;
   gap: 1em;
-}
-
-.img {
-  width: 80%;
-  border-radius: 8px;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding-right: 3em;
 }
 
 .technologies {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  gap: 0.5em;
+  gap: 1em;
+  row-gap: 0.5em;
 }
 
 .technologies li {
   color: var(--accent);
-  border: var(--accent);
-  padding: 0.25em 0.5em;
-  border-radius: 5px;
   border: thin solid var(--accent);
+  border-radius: 5px;
+  padding: 0.25em 0.5em;
+  font-size: var(--body-size-sm);
+}
+
+.text {
+  font-size: var(--body-size)
 }
 
 .links {
   display: flex;
-  gap: 2em;
+  gap: 1em;
 }
 
 .link {
-  font-size: 0.9em;
+  font-size: var(--body-size-sm);
   color: var(--accent);
+}
+
+@media (width <= 425px) {
+  .project {
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+
+  .project:not(.project-backwards) .text-container {
+    order: -1;
+  }
+
+  .project:not(.project-backwards) .imgs {
+    order: 1
+  }
+
+  .img-left {
+    display: none;
+  }
+
+  .project .imgs {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .img-right {
+    width: 100%;
+  }
 }

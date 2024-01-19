@@ -52,4 +52,46 @@ textarea:focus {
   --background: #eee;
   --background-secondary: #fff;
   --background-trans: #eeed;
+
+  --title-size: 3rem;
+  --title-size-lg: 5rem;
+  --body-size: 1.2rem;
+  --body-size-sm: 1rem;
+  --sub-heading-size: 1.5rem;
+
+  --gap-lg: 12em;
+  --inline-padding: 4em;
+}
+
+@media (width <= 1024px) {
+  :root {
+    --title-size-lg: 4rem;
+    --title-size: 2.5rem;
+    --body-size: 1rem;
+    --body-size-sm: 0.8rem;
+
+    --gap-lg: 8em;
+  }
+}
+
+@media (width <= 768px) {
+  :root {
+    --inline-padding: 2em;
+  }
+}
+
+@media (width <= 425px) {
+  :root {
+    --title-size: 2rem;
+    --title-size-lg: 3rem;
+    --body-size: 0.8rem;
+  }
+}
+
+@media (width <= 320px) {
+  :root {
+    --inline-padding: 1em;
+    --body-size: 0.7rem;
+    --body-size-sm: 0.7em
+  }
 }

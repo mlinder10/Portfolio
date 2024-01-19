@@ -1,12 +1,15 @@
-import Reveal from "../components/Reveal";
-import styles from "../styles/about.module.css";
+// import Reveal from "../components/Reveal";
+// import styles from "../styles/about.module.css";
+import styles from "../styles/testabout.module.css";
 
-const options = { delay: 0.3, duration: 0.8 };
+// const options = { delay: 0.3, duration: 0.8 };
 
 export default function About() {
   return (
     <section className={styles.main} id="about">
-      <Reveal from="left" {...options}>
+      <div className={styles.gradient} />
+      <h1 className={styles.title}>About Me</h1>
+      {/* <Reveal from="left" {...options}>
         <img src="/book.jpeg" alt="" />
       </Reveal>
       <Reveal from="top" {...options}>
@@ -28,7 +31,7 @@ export default function About() {
       </Reveal>
       <Reveal from="right" {...options}>
         <img src="/keyboard.png" alt="" />
-      </Reveal>
+      </Reveal> */}
     </section>
   );
 }

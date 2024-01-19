@@ -84,12 +84,6 @@ export default function Contact() {
         </Reveal>
       </div>
       <div className={styles.right}>
-        {/* <a href="https://www.linkedin.com/in/matt-linder10" target="_blank">
-          <FaLinkedin className={styles.icon} />
-        </a>
-        <a href="https://github.com/mlinder10" target="_blank">
-          <FaGithub className={styles.icon} />
-        </a> */}
       </div>
     </section>
   );
