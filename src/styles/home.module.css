@@ -4,6 +4,7 @@
   justify-content: center;
   position: relative;
   background-color: var(--background-secondary);
+  padding-block: 0;
 }
 
 .title {
