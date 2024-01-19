@@ -15,10 +15,11 @@ export default function About() {
           <p className={styles.text}>
             {`
             I'm currently a junior at the University of South Carolina, where I
-            study computer science and psychology. I love learning about new
-            technologies and ideas. As a consequence, I spend the majority of my
-            free time reading books, listening to podcasts, and building things.
-            Here are some of the places that my interest lies at the moment.
+            study computer science and psychology. I have a passion for learning
+            new ideas and technologies. As a consequence, I spend the majority
+            of my free time reading books, listening to podcasts, and building
+            things. Here are some of the places that my interest lies at the
+            moment.
             `}
           </p>
         </div>

@@ -81,7 +81,7 @@ export default function Projects() {
               </h4>
               <p>
                 {`
-                  Over the course of two fourteen-day sprints, my group mates and I
+                  Over the course of two fourteen-day sprints, my teammates and I
                   developed a Scrum task manager desktop application. We employed
                   the JavaFX framework along with the MVC architectural pattern to
                   create a GUI and wrote the backend entirely in Java, using JSON
