@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <main>
+    <main style={{position: "relative"}}>
       <Navbar />
       <Home />
       <Projects />
