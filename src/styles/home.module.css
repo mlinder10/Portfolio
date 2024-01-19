@@ -2,9 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   background-color: var(--background-secondary);
-  padding-block: 0;
 }
 
 .title {
@@ -47,3 +45,9 @@
   object-position: bottom;
   pointer-events: none;
 }
+
+/* @media (width <= 425px) {
+  .img {
+
+  }
+} */
