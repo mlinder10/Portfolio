@@ -2,7 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-secondary);
+  /* background color gradient #eee to #fff */
+  background: linear-gradient(
+    180deg,
+    var(--background),
+    var(--background-secondary)
+  );
+  padding-block: 0;
 }
 
 .title {
