@@ -11,6 +11,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -92,6 +93,6 @@ textarea:focus {
   :root {
     --inline-padding: 1em;
     --body-size: 0.7rem;
-    --body-size-sm: 0.7em
+    --body-size-sm: 0.7em;
   }
 }
