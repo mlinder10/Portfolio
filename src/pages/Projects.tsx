@@ -51,14 +51,14 @@ export default function Projects() {
               </a>
               <a
                 className={styles.link}
-                href="https://github.com/mattlinder/word-catching-journal"
+                href="https://github.com/mlinder10/WordCatchingJournal"
                 target="_blank"
               >
                 Source (web)
               </a>
               <a
                 className={styles.link}
-                href="https://github.com/mattlinder/word-catching-journal"
+                href="https://github.com/mlinder10/WordCatchingJournalSwift"
                 target="_blank"
               >
                 Source (iOS)
@@ -92,7 +92,7 @@ export default function Projects() {
             <div className={styles.links}>
               <a
                 className={styles.link}
-                href="https://github.com/mattlinder/TaskShare"
+                href="https://github.com/mlinder10/TaskShare"
                 target="_blank"
               >
                 View Code
