@@ -44,8 +44,8 @@ export default function Contact() {
   return (
     <section className={styles.main} id="contact">
       <div className={styles.left}>
-        <h1 className={styles.title}>Send Me A Message</h1>
-        <Reveal width="100%" from="left" duration={0.7} delay={0.3}>
+        <h1 className={styles.title}>Get in Contact</h1>
+        <Reveal width="100%">
           <form className={styles.form}>
             <div className={styles.email}>
               <FaEnvelope />
