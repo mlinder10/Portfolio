@@ -10,11 +10,11 @@ export default function About() {
         <Reveal from="left">
           <p className={styles.text}>
             {`
-            I'm currently a junior at the University of South Carolina, where I
-            study computer science and psychology. I have a passion for
-            learning. As a consequence, I spend the majority of my free time
-            reading books, listening to podcasts, and building things. Here are
-            some of the places that my interest lies at the moment.
+              I'm currently a junior at the University of South Carolina, where I
+              study computer science and psychology. I have a passion for
+              learning. As a consequence, I spend the majority of my free time
+              reading books, listening to podcasts, and building things. Here are
+              some of the places that my interest lies at the moment.
             `}
           </p>
         </Reveal>
