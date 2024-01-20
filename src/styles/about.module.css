@@ -58,3 +58,24 @@
 .keyboard {
   translate: 0 -20%;
 }
+
+@media (width <= 768px) {
+  .text {
+    padding-inline: 4em;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    row-gap: 4em;
+  }
+}
+
+@media (width <= 425px) {
+  .text {
+    padding-inline: 0;
+  }
+
+  .columns {
+    row-gap: 2em;
+  }
+}

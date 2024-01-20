@@ -7,7 +7,7 @@ export default function About() {
       <div className={styles.gradient} />
       <h1 className={styles.title}>About Me</h1>
       <div className={styles.columns}>
-        <Reveal from="left" delay={0.7}>
+        <Reveal from="left">
           <p className={styles.text}>
             {`
             I'm currently a junior at the University of South Carolina, where I
