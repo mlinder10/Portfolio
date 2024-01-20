@@ -1,4 +1,4 @@
-import { FaEnvelope, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
 import styles from "../styles/contact.module.css";
 import { FormEvent, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -45,7 +45,7 @@ export default function Contact() {
     <section className={styles.main} id="contact">
       <div className={styles.left}>
         <h1 className={styles.title}>Get in Contact</h1>
-        <Reveal width="100%">
+        <Reveal from="left" width="100%">
           <form className={styles.form}>
             <div className={styles.email}>
               <FaEnvelope />
@@ -84,6 +84,12 @@ export default function Contact() {
         </Reveal>
       </div>
       <div className={styles.right}>
+        <a href="https://github.com/mlinder10" target="_blank">
+          <FaGithub className={styles.icon} />
+        </a>
+        <a href="https://www.linkedin.com/in/matt-linder10" target="_blank">
+          <FaLinkedin className={styles.icon} />
+        </a>
       </div>
     </section>
   );

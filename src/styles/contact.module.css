@@ -79,13 +79,20 @@
 }
 
 .right {
+  padding-top: 6em;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
+  padding-left: 4em;
 }
 
 .icon {
-  font-size: 3em;
+  font-size: 4em;
+  fill: var(--primary);
+}
+
+.icon:hover {
+  fill: var(--accent);
 }
 
 @media (width <= 425px) {
