@@ -20,10 +20,10 @@ export default function About() {
         </Reveal>
         <div className={styles.imgs}>
           <Reveal width="100%" className={styles.book} delay={0.3}>
-            <img className={styles.img} src="/book.jpeg" alt="" />
+            <img className={styles.img} src="/pong.JPG" alt="" />
           </Reveal>
           <Reveal width="100%" className={styles.podcast} delay={0.4}>
-            <img className={styles.img} src="/podcast.png" alt="" />
+            <img className={styles.img} src="/book.jpeg" alt="" />
           </Reveal>
           <Reveal width="100%" className={styles.keyboard}>
             <img className={styles.img} src="/keyboard.png" alt="" />
