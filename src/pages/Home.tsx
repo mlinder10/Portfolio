@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Reveal from "../components/Reveal";
 import styles from "../styles/home.module.css";
+import background from "../assets/background.png";
 
 export default function Home() {
   const [scroll, setScroll] = useState(0);
@@ -26,14 +27,14 @@ export default function Home() {
 
   function calculateOpacity() {
     if (scroll < 0) return 1;
-    if (scroll > (pageHeight / 1.5)) return 0;
+    if (scroll > pageHeight / 1.5) return 0;
     return 1 - scroll / (pageHeight / 1.5);
   }
 
   return (
     <section className={styles.main} id="home">
       <img
-        src="/background.png"
+        src={background}
         alt=""
         className={styles.img}
         style={{

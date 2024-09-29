@@ -1,5 +1,11 @@
 import styles from "../styles/projects.module.css";
 import Reveal from "../components/Reveal";
+import wcjMobile from "../assets/projects/wordCatchingJournalMobile.png";
+import wcjWeb from "../assets/projects/wordCatchingJournal.png";
+import tsLogin from "../assets/projects/taskShareLogin.png";
+import tsDash from "../assets/projects/taskShareDashboard.png";
+import vvMobile from "../assets/projects/valetVenturesMobile.png";
+import vvWeb from "../assets/projects/valetVenturesHome.png";
 
 export default function Projects() {
   return (
@@ -9,18 +15,10 @@ export default function Projects() {
       <div className={`${styles.project}`}>
         <div className={styles.imgs}>
           <Reveal from="bottom">
-            <img
-              className={styles["img-left"]}
-              src="/projects/wordCatchingJournalMobile.png"
-              alt=""
-            />
+            <img className={styles["img-left"]} src={wcjMobile} alt="" />
           </Reveal>
           <Reveal from="right">
-            <img
-              className={styles["img-right"]}
-              src="/projects/wordCatchingJournal.png"
-              alt=""
-            />
+            <img className={styles["img-right"]} src={wcjWeb} alt="" />
           </Reveal>
         </div>
         <Reveal from="bottom">
@@ -109,18 +107,10 @@ export default function Projects() {
               width: "80%",
             }}
           >
-            <img
-              className={styles["img-left"]}
-              src="/projects/taskShareLogin.png"
-              alt=""
-            />
+            <img className={styles["img-left"]} src={tsLogin} alt="" />
           </Reveal>
           <Reveal from="right">
-            <img
-              className={styles["img-right"]}
-              src="/projects/taskShareDashboard.png"
-              alt=""
-            />
+            <img className={styles["img-right"]} src={tsDash} alt="" />
           </Reveal>
         </div>
       </div>
@@ -128,18 +118,10 @@ export default function Projects() {
       <div className={styles.project}>
         <div className={styles.imgs}>
           <Reveal from="bottom">
-            <img
-              className={styles["img-left"]}
-              src="/projects/valetVenturesMobile.png"
-              alt=""
-            />
+            <img className={styles["img-left"]} src={vvMobile} alt="" />
           </Reveal>
           <Reveal from="right">
-            <img
-              className={styles["img-right"]}
-              src="/projects/valetVenturesHome.png"
-              alt=""
-            />
+            <img className={styles["img-right"]} src={vvWeb} alt="" />
           </Reveal>
         </div>
         <Reveal from="bottom">

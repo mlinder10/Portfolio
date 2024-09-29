@@ -1,5 +1,8 @@
 import Reveal from "../components/Reveal";
 import styles from "../styles/about.module.css";
+import pong from "../assets/pong.jpeg";
+import book from "../assets/book.jpeg";
+import keyboard from "../assets/keyboard.png";
 
 export default function About() {
   return (
@@ -20,13 +23,13 @@ export default function About() {
         </Reveal>
         <div className={styles.imgs}>
           <Reveal width="100%" className={styles.book} delay={0.3}>
-            <img className={styles.img} src="/pong.JPG" alt="" />
+            <img className={styles.img} src={pong} alt="" />
           </Reveal>
           <Reveal width="100%" className={styles.podcast} delay={0.4}>
-            <img className={styles.img} src="/book.jpeg" alt="" />
+            <img className={styles.img} src={book} alt="" />
           </Reveal>
           <Reveal width="100%" className={styles.keyboard}>
-            <img className={styles.img} src="/keyboard.png" alt="" />
+            <img className={styles.img} src={keyboard} alt="" />
           </Reveal>
         </div>
       </div>
