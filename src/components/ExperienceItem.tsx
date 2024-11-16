@@ -10,9 +10,9 @@ export const experience: ExperienceType[] = [
     end: "Present",
     location: "Columbia, SC",
     bullets: [
-      "Created a command line tool to convert Avaya Orchestration Designer projects into an internal format which primarily consisted of translating Java to JEXL and SCXML to JSON",
-      "Built a full stack web application using Java Spring Boot, React.js, and PostgreSQL to process SIP messages and present them as sequence diagrams to frontend users",
-      "Merged several features to existing React.js and Java Spring Boot applications in production environments",
+      "Developed a command-line tool to convert Avaya Orchestration Designer projects into an internal format, primarily translating Java to JEXL and SCXML to JSON.",
+      "Built a full-stack web application with Java Spring Boot, React.js, and PostgreSQL to process SIP messages and render them as sequence diagrams for frontend users.",
+      "Integrated new features into existing React.js and Java Spring Boot applications in live production environments.",
     ],
     skills: [
       "HTML",
@@ -31,8 +31,8 @@ export const experience: ExperienceType[] = [
     end: "May 2022",
     location: "Columbia, SC",
     bullets: [
-      "Designed and implemented numerous personal websites for students",
-      "Developed embedded web applications for the Monday.com platform in collaboration with student entrepreneurs mainly using React.js, Golang, and SQLite accruing over 200 active monthly users",
+      "Designed and developed personalized websites for students, enhancing their online presence and project portfolios.",
+      "Collaborated with student entrepreneurs to create embedded web applications for the Monday.com platform, utilizing React.js, Go, and SQLite, accruing over 1000 active monthly users.",
     ],
     skills: [
       "HTML",
@@ -53,8 +53,8 @@ export const experience: ExperienceType[] = [
     end: "Mar 2022",
     location: "Columbia, SC",
     bullets: [
-      "Developed a web application for the Village of Fredonia to simplify the community's public pavilion reservation process using Next.js and PostgreSQL",
-      "Created websites for multiple small businesses mostly using Next.js",
+      "Developed a web application for the Village of Fredonia, NY, streamlining the community's public pavilion reservation process using Next.js and PostgreSQL.",
+      "Built custom websites for small businesses and individuals, primarily employing Next.js.",
     ],
     skills: [
       "HTML",
