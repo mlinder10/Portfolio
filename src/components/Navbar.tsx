@@ -1,50 +1,33 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/components/navbar.module.css";
+import styles from "./navbar.module.css";
+import { debounce } from "lodash";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [blur, setBlur] = useState(false);
 
   useEffect(() => {
-    function checkScroll() {
-      setIsOpen(window.scrollY < 60);
-    }
-    
-    window.addEventListener("scroll", checkScroll);
+    const handleScroll = debounce(() => {
+      const pageHeight = document.documentElement.clientHeight;
+      setBlur(window.scrollY >= pageHeight / 2);
+    });
 
-    return () => window.removeEventListener("scroll", checkScroll);
+    document.addEventListener("scroll", handleScroll);
+
+    return () => document.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header
-      className={`${styles.header} ${isOpen ? styles.open : styles.closed}`}
-    >
-      <nav>
-        <ul className={styles.ul}>
-          <div className={styles.left}>
-            <li>
-              <a href="#">Matt Linder</a>
-            </li>
-          </div>
-          <div className={styles.right}>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li className={styles.resume}>
-              <a href="/Resume.pdf" target="_blank">
-                Resume
-              </a>
-            </li>
-          </div>
-        </ul>
+    <header className={`${styles.header} ${blur ? styles.blur : ""}`}>
+      <nav className={styles.nav}>
+        <a href="#">Matt Linder</a>
+        <div className={styles.links}>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="/resume.pdf" target="_blank" className={styles.resume}>
+            Resume
+          </a>
+        </div>
       </nav>
     </header>
   );

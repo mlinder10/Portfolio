@@ -1,0 +1,47 @@
+.experience {
+  padding: 2rem;
+  min-height: 75vh;
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-wrap: nowrap;
+  color: var(--secondary);
+  font-size: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: #000;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 1rem 0.5rem;
+}
+
+.title {
+  font-weight: var(--semibold);
+  font-size: 1.4rem;
+}
+
+.company {
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-top: 2rem;
+  padding-inline: 4rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}

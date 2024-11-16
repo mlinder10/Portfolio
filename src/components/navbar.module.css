@@ -1,0 +1,43 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: 0.3s ease-in-out;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+
+.resume {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--accent);
+  color: var(--background);
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.header.blur {
+  backdrop-filter: blur(5px);
+
+  .nav {
+    padding: 1rem 2rem;
+  }
+
+  .links {
+    gap: 2rem;
+  }
+}
