@@ -10,9 +10,9 @@ export const experience: ExperienceType[] = [
     end: "Present",
     location: "Columbia, SC",
     bullets: [
-      "Developed a command-line tool to convert Avaya Orchestration Designer projects into an internal format, primarily translating Java to JEXL and SCXML to JSON.",
       "Built a full-stack web application with Java Spring Boot, React.js, and PostgreSQL to process SIP messages and render them as sequence diagrams for frontend users.",
       "Integrated new features into existing React.js and Java Spring Boot applications in live production environments.",
+      "Developed a command-line tool to convert Avaya Orchestration Designer projects into an internal format, primarily translating Java to JEXL and SCXML to JSON.",
     ],
     skills: [
       "HTML",
@@ -31,8 +31,8 @@ export const experience: ExperienceType[] = [
     end: "May 2022",
     location: "Columbia, SC",
     bullets: [
+      "Collaborated with student entrepreneurs to create embedded web applications for the Monday.com platform, utilizing React.js, Golang, and SQLite, accruing over 1000 active monthly users.",
       "Designed and developed personalized websites for students, enhancing their online presence and project portfolios.",
-      "Collaborated with student entrepreneurs to create embedded web applications for the Monday.com platform, utilizing React.js, Go, and SQLite, accruing over 1000 active monthly users.",
     ],
     skills: [
       "HTML",
