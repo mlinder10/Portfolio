@@ -19,7 +19,7 @@ export const projects: ProjectType[] = [
       "SQLite",
     ],
     videoUrl: "https://youtube.com/embed/HaPrNBwLzbo",
-    videoType: "lanscape",
+    videoType: "landscape",
     links: [
       {
         text: "Live Site",
@@ -50,7 +50,7 @@ export const projects: ProjectType[] = [
   },
 ];
 
-type VideoType = "lanscape" | "portrait";
+type VideoType = "landscape" | "portrait";
 
 type ProjectType = {
   title: string;
@@ -83,6 +83,7 @@ export default function ProjectItem({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!ref.current) return;
     observeElement(ref.current, skills);
   }, [observeElement, skills]);
 
@@ -94,7 +95,12 @@ export default function ProjectItem({
           <p className={styles.description}>{description}</p>
           <div className={styles.links}>
             {links.map((link) => (
-              <a key={link.url} href={link.url} target="_blank">
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 {link.icon}
                 <span>{link.text}</span>
               </a>
@@ -104,8 +110,11 @@ export default function ProjectItem({
         <iframe
           src={videoUrl}
           allowFullScreen
-          title="video"
+          title={`${title} video`}
+          allow="encrypted-media"
+          aria-label={`${title} video`}
           className={`${styles.video} ${styles[videoType]}`}
+          onError={() => console.log("Failed to load video")}
         />
       </div>
     );
