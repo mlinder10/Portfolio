@@ -68,7 +68,7 @@ export default function Experience() {
         observerRef.current?.observe(element);
       }
     },
-    []
+    [observerRef.current]
   );
 
   return (
