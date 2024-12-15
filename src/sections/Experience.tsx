@@ -15,63 +15,53 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { FaJava, FaNode } from "react-icons/fa";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import ExperienceItem, { experience } from "../components/ExperienceItem";
 import ProjectItem, { projects } from "../components/ProjectItem";
 
 export default function Experience() {
   const [current, setCurrent] = useState<Skill[]>(experience[0].skills);
-  const observerRef = useRef<IntersectionObserver>();
-
-  useEffect(() => {
-    const intersectionRatios = new Map<Element, number>();
-
-    if (typeof window !== "undefined") {
-      observerRef.current = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              intersectionRatios.set(entry.target, entry.intersectionRatio);
-            } else {
-              intersectionRatios.delete(entry.target);
-            }
-          });
-          let maxRatio = 0;
-          let mostVisibleElement: Element | null = null;
-
-          intersectionRatios.forEach((ratio, element) => {
-            if (ratio > maxRatio) {
-              maxRatio = ratio;
-              mostVisibleElement = element;
-            }
-          });
-
-          if (mostVisibleElement) {
-            const skills = (mostVisibleElement as HTMLElement).getAttribute(
-              "data-skills"
-            );
-            if (skills) {
-              setCurrent(JSON.parse(skills));
-            }
+  const intersectionRatios = new Map<Element, number>();
+  const observerRef = useRef<IntersectionObserver>(
+    new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            intersectionRatios.set(entry.target, entry.intersectionRatio);
+          } else {
+            intersectionRatios.delete(entry.target);
           }
-        },
-        { threshold: [0, 0.25, 0.5, 0.75, 1] }
-      );
-    }
+        });
+        let maxRatio = 0;
+        let mostVisibleElement: Element | null = null;
 
-    return () => {
-      observerRef.current?.disconnect();
-    };
-  }, []);
+        intersectionRatios.forEach((ratio, element) => {
+          if (ratio > maxRatio) {
+            maxRatio = ratio;
+            mostVisibleElement = element;
+          }
+        });
+
+        if (mostVisibleElement) {
+          const skills = JSON.parse(
+            (mostVisibleElement as HTMLElement).getAttribute("data-skills") ||
+              "[]"
+          );
+          setCurrent(skills);
+        }
+      },
+      { threshold: [0, 0.25, 0.5, 0.75, 1] }
+    )
+  );
 
   const observeElement = useCallback(
     (element: HTMLElement | null, skills: Skill[]) => {
-      if (element) {
+      if (element && observerRef.current) {
         element.setAttribute("data-skills", JSON.stringify(skills));
         observerRef.current?.observe(element);
       }
     },
-    [observerRef]
+    []
   );
 
   return (

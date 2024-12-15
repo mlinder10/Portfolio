@@ -95,7 +95,6 @@ export default function ExperienceItem({
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!ref.current) return;
     observeElement(ref.current, skills);
   }, [observeElement, skills]);
 

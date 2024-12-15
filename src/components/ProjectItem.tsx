@@ -110,11 +110,11 @@ export default function ProjectItem({
         <iframe
           src={videoUrl}
           allowFullScreen
-          title={`${title} video`}
+          title={title}
           allow="encrypted-media"
           aria-label={`${title} video`}
           className={`${styles.video} ${styles[videoType]}`}
-          onError={() => console.log("Failed to load video")}
+          onError={() => {}}
         />
       </div>
     );
@@ -125,9 +125,11 @@ export default function ProjectItem({
       <iframe
         src={videoUrl}
         allowFullScreen
-        title="video"
+        title={title}
         allow="encrypted-media"
+        aria-label={`${title} video`}
         className={`${styles.video} ${styles[videoType]}`}
+        onError={() => {}}
       />
       <div className={styles.info}>
         <p className={styles.title}>{title}</p>
