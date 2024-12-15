@@ -66,13 +66,9 @@ export default function Experience() {
 
   const observeElement = useCallback(
     (element: HTMLElement | null, skills: Skill[]) => {
-      console.log("observeElement called with:", element, skills);
-      if (element && observerRef.current) {
-        console.log("Setting data-skills for element:", element);
+      if (element) {
         element.setAttribute("data-skills", JSON.stringify(skills));
-        observerRef.current.observe(element);
-      } else {
-        console.error("observerRef or element is undefined");
+        observerRef.current?.observe(element);
       }
     },
     [observerRef]
