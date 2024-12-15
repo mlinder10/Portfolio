@@ -26,35 +26,38 @@ export default function Experience() {
   useEffect(() => {
     const intersectionRatios = new Map<Element, number>();
 
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            intersectionRatios.set(entry.target, entry.intersectionRatio);
-          } else {
-            intersectionRatios.delete(entry.target);
-          }
-        });
-        let maxRatio = 0;
-        let mostVisibleElement: Element | null = null;
-
-        intersectionRatios.forEach((ratio, element) => {
-          if (ratio > maxRatio) {
-            maxRatio = ratio;
-            mostVisibleElement = element;
-          }
-        });
-
-        if (mostVisibleElement) {
-          (mostVisibleElement as HTMLElement).classList.forEach((c) => {
-            if (c.startsWith("skills--")) {
-              setCurrent(JSON.parse(c.split("--")[1]));
+    if (typeof window !== "undefined") {
+      observerRef.current = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              intersectionRatios.set(entry.target, entry.intersectionRatio);
+            } else {
+              intersectionRatios.delete(entry.target);
             }
           });
-        }
-      },
-      { threshold: [0, 0.25, 0.5, 0.75, 1] }
-    );
+          let maxRatio = 0;
+          let mostVisibleElement: Element | null = null;
+
+          intersectionRatios.forEach((ratio, element) => {
+            if (ratio > maxRatio) {
+              maxRatio = ratio;
+              mostVisibleElement = element;
+            }
+          });
+
+          if (mostVisibleElement) {
+            const skills = (mostVisibleElement as HTMLElement).getAttribute(
+              "data-skills"
+            );
+            if (skills) {
+              setCurrent(JSON.parse(skills));
+            }
+          }
+        },
+        { threshold: [0, 0.25, 0.5, 0.75, 1] }
+      );
+    }
 
     return () => {
       observerRef.current?.disconnect();
@@ -63,12 +66,12 @@ export default function Experience() {
 
   const observeElement = useCallback(
     (element: HTMLElement | null, skills: Skill[]) => {
-      if (element && observerRef.current) {
-        element.classList.add("skills--" + JSON.stringify(skills));
+      if (element) {
+        element.setAttribute("data-skills", JSON.stringify(skills));
         observerRef.current?.observe(element);
       }
     },
-    [observerRef]
+    []
   );
 
   return (
